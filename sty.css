@@ -1,0 +1,86 @@
+/* Style for the About Us page */
+.about-section {
+    background: linear-gradient(to right, #e91e63, #ff5722); /* Keep the original background gradient */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2); /* More transparency for a lighter background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow for a floating effect */
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.about-container:hover {
+    transform: translateY(-10px); /* Lift the container on hover */
+}
+
+.about-container h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase; /* Capitalized text for titles */
+}
+
+.about-container h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #ffcccb; /* Lighter pink color for headings */
+    margin-bottom: 25px;
+}
+
+.about-container p, .about-container ul {
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #f0f0f0; /* Light grey text for easier reading */
+}
+
+.about-container ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Indentation for bullet points */
+}
+
+.about-container ul li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.about-container ul li::before {
+    content: "✔"; /* Add checkmarks for bullet points */
+    color: #ffcccb;
+    font-size: 1.2em;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+.about-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container a:hover {
+    background-color: #e91e63;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3); /* Button hover effect */
+}

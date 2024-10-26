@@ -1,0 +1,115 @@
+/* General Body Styling for Register and Login Pages */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e91e63, #ff5722);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for Register and Login Pages */
+.register-container, .login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align text to the left */
+    width: 400px;
+}
+
+h1 {
+    color: #ff5722;
+    text-align: center; /* Center the title */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold; /* Make the label bold */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Style for the button */
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e91e63;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Success/Info Message Styling */
+.message {
+    color: green;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Link Styling for Register/Login pages */
+.login-link, .signup-link {
+    margin-top: 20px;
+}
+
+.login-link a, .signup-link a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.login-link a:hover, .signup-link a:hover {
+    color: #e91e63;
+    text-decoration: underline;
+}
+
+/* Password Visibility Toggle Icon */
+.show-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .register-container, .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

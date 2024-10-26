@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="feedback.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="feedbackApp" ng-controller="FeedbackController">
+
+    <div class="feedback-container" ng-show="!submitted">
+        <h2>We Value Your Feedback!</h2>
+        <form ng-submit="submitFeedback()">
+            <div class="star-rating">
+                <input type="radio" id="star1" name="rating" ng-model="rating" value="5"/>
+                <label for="star1" class="star">&#9733;</label>
+                <input type="radio" id="star2" name="rating" ng-model="rating" value="4"/>
+                <label for="star2" class="star">&#9733;</label>
+                <input type="radio" id="star3" name="rating" ng-model="rating" value="3"/>
+                <label for="star3" class="star">&#9733;</label>
+                <input type="radio" id="star4" name="rating" ng-model="rating" value="2"/>
+                <label for="star4" class="star">&#9733;</label>
+                <input type="radio" id="star5" name="rating" ng-model="rating" value="1"/>
+                <label for="star5" class="star">&#9733;</label>
+            </div>
+            <textarea ng-model="feedbackText" placeholder="Leave your feedback here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="thank-you-message" ng-show="submitted">
+        <h2>Thank You!</h2>
+        <p>Your feedback means a lot to us!</p>
+        <p>🌟 We appreciate you taking the time to help us improve. 🌟</p>
+    </div>
+
+    <script>
+        angular.module('feedbackApp', [])
+            .controller('FeedbackController', ['$scope', function($scope) {
+                $scope.rating = null;
+                $scope.feedbackText = '';
+                $scope.submitted = false;
+
+                $scope.submitFeedback = function() {
+                    // You can handle the feedback submission here (e.g., save to database)
+                    console.log('Rating:', $scope.rating);
+                    console.log('Feedback:', $scope.feedbackText);
+                    $scope.submitted = true;
+                };
+            }]);
+    </script>
+</body>
+</html>
